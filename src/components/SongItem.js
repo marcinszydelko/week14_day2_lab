@@ -1,8 +1,11 @@
 import React from "react";
 
-const SongItem = () => {
+const SongItem = ({song}) => {
     return (
-        <h3>SongItem</h3>
+    <li>
+    <b>{song["im:name"].label}</b> - 
+    {song["im:artist"].label}
+    </li>
     )
 }
 

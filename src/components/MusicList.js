@@ -2,11 +2,17 @@ import React from "react";
 import MusicBox from "../containers/MusicBox";
 import SongItem from "./SongItem";
 
-const MusicList = (props) => {
+const MusicList = ({songs}) => {
+
+    const songNodes = songs.map(song => {
+        return (
+            <SongItem song={song}></SongItem>
+        )
+    })
+
     return(
         <div>
-            <h3>Music List </h3>
-            <SongItem />
+           <ol> {songNodes}</ol>
         </div>
     )
 }
